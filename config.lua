@@ -23,6 +23,15 @@ Config.Locations = {
     ["roof"] = {
         [1] = {x = 338.5, y = -583.85, z = 74.16, h = 245.5},
     },
+    ["Lower Pillbox"] = {
+        [1] = {x = 342.27, y = -585.42, z = 28.79, h = 349.5},
+    },
+    ["Lower Pillbox2"] = {
+        [1] = {x = 343.44, y = -581.73, z = 28.79, h = 245.5},
+    },
+    ["main2"] = {
+        [1] = {x = 330.2, y = -601.09, z = 42.31, h = 76.0},
+    },
     ["main"] = {
         [1] = {x = 332.51, y = -595.74, z = 43.28, h = 76.0},
     },        
@@ -39,24 +48,25 @@ Config.Locations = {
 }
 
 Config.Vehicles = {
-    ["asprinter"] = "Mercedes-Benz Sprinter",
-    ["aeklasse"] = "Mercedes-Benz E-Klasse",
+    ["amr_ambo"] = "Ambulance",
+    ["amr_explorer"] = "Explorer",
+    ["amr_tahoe"] = "Tahoe",
 }
 
 Config.Whitelist = {
     "GAA35566",
 }
 
-Config.Helicopter = "alifeliner"
+Config.Helicopter = "ec145med"
 
 Config.Items = {
-    label = "Hospital safe",
+    label = "Hospital Safe",
     slots = 30,
     items = {
         [1] = {
             name = "radio",
             price = 0,
-            amount = 50,
+            amount = 1,
             info = {},
             type = "item",
             slot = 1,
@@ -80,7 +90,7 @@ Config.Items = {
         [4] = {
             name = "weapon_flashlight",
             price = 0,
-            amount = 50,
+            amount = 1,
             info = {},
             type = "item",
             slot = 4,
@@ -88,16 +98,24 @@ Config.Items = {
         [5] = {
             name = "weapon_fireextinguisher",
             price = 0,
-            amount = 50,
+            amount = 1,
             info = {},
             type = "item",
             slot = 5,
+        },
+        [6] = {
+            name = "advancedrepairkit",
+            price = 25,
+            amount = 3,
+            info = {},
+            type = "item",
+            slot = 6,
         },
     }
 }
 
 Config.BillCost = 2000
-Config.DeathTime = 300
+Config.DeathTime = 30
 Config.CheckTime = 10
 
 Config.PainkillerInterval = 60 -- seconds
@@ -109,7 +127,7 @@ Config.PainkillerInterval = 60 -- seconds
     RegenRate : 
 ]]
 Config.MaxHp = 200
-Config.RegenRate = 0.0
+Config.RegenRate = 0.1
 
 --[[
     HealthDamage : How Much Damage To Direct HP Must Be Applied Before Checks For Damage Happens
@@ -134,7 +152,7 @@ Config.MessageTimer = 12
 --[[
     AIHealTimer : How long it will take to be healed after checking in, in seconds
 ]]
-Config.AIHealTimer = 20
+Config.AIHealTimer = 120
 
 --[[ 
     BleedTickRate : How much time, in seconds, between bleed ticks
